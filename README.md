@@ -1,16 +1,20 @@
-# message_board_app
+# Message Board App
 
-A new Flutter project.
+A simple Flutter message-board app with Firebase integration (Auth + Firestore).
 
-## Getting Started
+**Features:**
+- Email/password registration and login (Firebase Auth).
+- User profiles stored in Firestore (uid, firstName, lastName, role, registrationDatetime, optional DOB).
+- Message boards (per-board real-time chat via Firestore).
+- Profile view/edit, change password, and logout.
+- Optional local Firebase emulator support for development.
 
-This project is a starting point for a Flutter application.
+**Prerequisites:**
+- Flutter SDK
+- Firebase CLI (for running local emulators)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Notes & important files:**
+- Firebase config: `lib/firebase_options.dart` and platform files under `android/app/` and `ios/`.
+- Main entry: `lib/main.dart` (contains emulator flag handling).
+- Register / Profile logic: `lib/screens/register_page.dart`, `lib/screens/profile_page.dart`.
+- Auth wrapper: `lib/services/auth_service.dart`.
